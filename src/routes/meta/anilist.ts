@@ -360,13 +360,7 @@ const generateAnilistMeta = (provider: string | undefined = undefined): Anilist 
       );
     }
 
-    return new META.Anilist(possibleProvider, {
-      url: process.env.PROXY as string | string[],
-    });
-  } else {
-    return new Anilist(undefined, {
-      url: process.env.PROXY as string | string[],
-    });
+    return new Anilist()
   }
 };
 
